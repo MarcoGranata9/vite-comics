@@ -58,7 +58,7 @@ export default {
             </div>
             <nav>
                 <ul>
-                    <li v-for="item in navItems"><a href="">{{ item.title }}</a></li>
+                    <li v-for="item in navItems" :key="item.title"><a href="">{{ item.title }}</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,7 +71,6 @@ export default {
 @use "../style/partials/variables" as *;
 
 header {
-    height: 120px;
     .container {
         @include flex(space-between, center, row);
         ul {
@@ -84,7 +83,7 @@ header {
                 text-decoration: none;
                 font-size: 0.9rem;
                 font-weight: bold;
-                padding-bottom: 53px;
+                padding-bottom: 40px;
                 &:hover {
                     border-bottom: 5px solid $primary;
                     color: $primary;
