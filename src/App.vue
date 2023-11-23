@@ -32,4 +32,9 @@ img {
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 </style>
