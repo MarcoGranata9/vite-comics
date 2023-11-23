@@ -18,6 +18,8 @@ export default {
 main {
     background-color: black;
     height: 150px;
+    position: relative;
+    z-index: 1;
     
     h1{
         color: white;

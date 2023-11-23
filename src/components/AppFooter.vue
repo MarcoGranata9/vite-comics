@@ -114,11 +114,12 @@ export default {
 
 <template>
 <footer>
-    <div class="footer-top">
+    <div class="footer-top">            
         <div class="container">
             <!-- Footer Logo -->
             <img src="../assets/img/dc-logo-bg.png" alt="">
             <!-- Footer Links -->
+
             <div>
                 <ul>
                     <h3>DC COMICS</h3>
@@ -165,7 +166,7 @@ export default {
     background-image: url(../assets/img/footer-bg.jpg);
     position: relative;
     padding: 50px;
-    z-index: -1;
+    z-index: 1;
     .container{
         @include flex(left, start, row);
         gap: 20px;
@@ -205,6 +206,8 @@ export default {
 .footer-bottom {
     background-color: $footer-color;
     padding: 40px;
+    position: relative;
+    z-index: 1;
     .container {
         @include flex(space-between, center, row);
 
