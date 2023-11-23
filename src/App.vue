@@ -2,13 +2,14 @@
 import AppHeader from "./components/AppHeader.vue"
 import AppMain from "./components/AppMain.vue"
 import AppFooter from "./components/AppFooter.vue"
+import AppIconLinks from "./components/AppIconLinks.vue"
 
 export default {
     components: {
     AppHeader,
     AppMain,
     AppFooter,
-
+    AppIconLinks,
 },
 }
 </script>
@@ -16,6 +17,7 @@ export default {
 <template>
 <AppHeader/>
 <AppMain/>
+<AppIconLinks/>
 <AppFooter/>
 </template>
 

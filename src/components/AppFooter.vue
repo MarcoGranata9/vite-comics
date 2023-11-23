@@ -187,7 +187,7 @@ export default {
         }
 
         ul {
-            list-style: none;
+            list-style-type: none;
         }
 
         li {
