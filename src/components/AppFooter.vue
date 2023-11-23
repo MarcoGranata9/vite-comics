@@ -145,11 +145,13 @@ export default {
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <button></button>
-            <h2>FOLLOW US</h2>
-            <ul>
-                <li><a href=""></a></li>
-            </ul>
+            <button>SIGN-UP NOW!</button>
+            <div>
+                <h2>FOLLOW US:</h2>
+                <ul>
+                    <li v-for="img in imgFooter" :key="img.path"><a href=""><img :src="getImagePath(img.path)" alt=""></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
@@ -158,7 +160,7 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
-
+// Footer Top
 .footer-top {
     background-image: url(../assets/img/footer-bg.jpg);
     position: relative;
@@ -199,5 +201,39 @@ export default {
         }
     }
 }
+// Footer Bottom
+.footer-bottom {
+    background-color: $footer-color;
+    padding: 40px;
+    .container {
+        @include flex(space-between, center, row);
 
+        button {
+            background-color: transparent;
+            font-size: 1.5rem;
+            color: white;
+            padding: .5rem;
+            border: 2px solid $primary;
+            &:hover {
+                opacity: 50%;
+                cursor: pointer
+            }
+        }
+
+        div {
+            @include flex(left, center, row);
+            gap: 10px;
+
+            h2 {
+                color: $primary
+            }
+
+            ul {
+                @include flex(left, start, row);
+                gap: 10px;
+                list-style: none;
+            }
+        }
+    }
+}
 </style>
