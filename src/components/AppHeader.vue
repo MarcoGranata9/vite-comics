@@ -50,18 +50,20 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    
     <header>
-        <div class="logo">
-            <img src="../assets/img/dc-logo.png" alt="Dc logo">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/img/dc-logo.png" alt="Dc logo">
+            </div>
+            <nav>
+                <ul>
+                    <li v-for="item in navItems"><a href="">{{ item.title }}</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li v-for="item in navItems"><a href="">{{ item.title }}</a></li>
-            </ul>
-        </nav>
     </header>
-    </div>
+    
 </template>
 
 <style scoped lang="scss">
@@ -70,21 +72,23 @@ export default {
 
 header {
     height: 120px;
-    @include flex(space-between, center, row);
-    ul {
-        @include flex(center, center, row);
-        gap: 20px;
-        list-style: none;
-
-        a {
-            color: black;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            padding-bottom: 30px;
-            &:hover {
-                border-bottom: 5px solid $primary;
-                color: $primary;
+    .container {
+        @include flex(space-between, center, row);
+        ul {
+            @include flex(center, center, row);
+            gap: 20px;
+            list-style: none;
+    
+            a {
+                color: black;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: bold;
+                padding-bottom: 53px;
+                &:hover {
+                    border-bottom: 5px solid $primary;
+                    color: $primary;
+                }
             }
         }
     }
