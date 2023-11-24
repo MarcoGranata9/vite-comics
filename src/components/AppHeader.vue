@@ -71,26 +71,28 @@ export default {
 @use "../style/partials/variables" as *;
 
 header {
-    padding: 10px;
+    height: 120px;
+    @include flex(center, center, row);
     .container {
         @include flex(space-between, center, row);
-        ul {
-            @include flex(center, center, row);
-            gap: 20px;
-            list-style: none;
-            
-            a {
-                color: black;
-                text-decoration: none;
-                font-size: 0.9rem;
-                font-weight: bold;
-                padding-bottom: 30px;
-                &:hover {
-                    border-bottom: 5px solid $primary;
-                    color: $primary;
+
+            ul {
+                @include flex(center, center, row);
+                gap: 1rem;
+                list-style: none;
+                
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    padding-bottom: 47px;
+                    &:hover {
+                        border-bottom: 5px solid $primary;
+                        color: $primary;
+                    }
                 }
             }
         }
     }
-}
 </style>

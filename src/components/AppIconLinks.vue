@@ -18,7 +18,11 @@ export default {
                 {
                     path: "buy-comics-shop-locator.png",
                     text: "COMIC SHOP LOCATOR"
-                },    
+                },
+                {
+                    path: "buy-dc-power-visa.svg",
+                    text: "DC POWER VISA"
+                }    
             ], 
         }
     },
@@ -40,12 +44,6 @@ export default {
                         <p>{{ img.text }}</p>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                        <p>DC POWER VISA</p>
-                    </a>
-                </li>
             </ul>
         </div>
     </section>
@@ -58,6 +56,8 @@ export default {
     section {
         background-color: $primary;
         padding: 50px 0;
+        position: relative;
+        z-index: 1;
         .container {
             width: 70%;
             margin: 0 auto;

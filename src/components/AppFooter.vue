@@ -175,7 +175,7 @@ export default {
             position: absolute;
             right: 10%;
             top: -20%;
-            z-index: 0;
+            z-index: -2;
         }
 
         h3{
