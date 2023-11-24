@@ -57,7 +57,7 @@ export default {
         background-color: $primary;
         padding: 50px 0;
         position: relative;
-        z-index: 1;
+        z-index: 2;
         .container {
             width: 70%;
             margin: 0 auto;
