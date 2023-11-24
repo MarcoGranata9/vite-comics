@@ -87,6 +87,7 @@ export default {
 <template>
     <main>
         <div class="container">
+            <h2>CURRENT SERIES</h2>
             <div class="row">
                 <div class="col" v-for="cardObj in cardsArray" :key="cardObj.thumb">
                     <MainCard :title="cardObj.series" :image="cardObj.thumb"/>
@@ -108,6 +109,18 @@ main {
     background-color: #1c1c1c;
     text-align: center;
     padding: 2rem;
+    position: relative;
+
+    h2{
+        color: white;
+        background-color: $primary;
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        position: absolute;
+        left: 150px;
+        top: 0;
+        transform: translateY(-50%);
+    }
     .jumbotron {
         height: 300px;
     }
